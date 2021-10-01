@@ -13,3 +13,18 @@ Launches the test runner in the interactive watch mode.\
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+
+#Commit Messages
+
+The commit message should be structured as follows
+
+### `<type>[optional scope]: <description>`
+Example: \
+feat(lang): added French language \
+fix(server): fixed 404 error in /GET requests
+
+###fix: 
+a commit of the type fix patches a bug in your codebase (this correlates with PATCH in semantic versioning).
+###feat: 
+a commit of the type feat introduces a new feature to the codebase (this correlates with MINOR in semantic versioning).
