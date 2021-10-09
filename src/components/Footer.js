@@ -4,7 +4,7 @@ const Footer = () => (
     <footer className="footer has-background-black-bis has-text-white">
         <div className="columns has-text-centered level">
             <div className="column">
-                <div className="is-flex is-justify-content-flex-start level">
+                <div className="is-flex is-justify-content-center level">
                     <span>Follow us on Instagram</span>
                     <figure className="image is-64x64">
                         <img src={image}/>
