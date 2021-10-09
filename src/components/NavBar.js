@@ -1,51 +1,43 @@
 import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom'
-import { Switch, Route} from "react-router-dom";
-import Menu from './Menu'
-import Location from './Location'
-import Order from './Order'
-import Signin from './Signin'
-import Signup from './Signup'
-import Home from "./Home";
-import Footer from "./Footer";
-
-
-
+import "../styles/Navbar.css"
 function NavBar() {
+    const [isActive, setActive] = useState(false);
+
+    const handleToggle = () => {
+      setActive(!isActive);
+    };
     return (
-        <nav className="navbar is-black padding-4" role="navigation">
-            <div className="navbar-menu container">
+        <nav className="navbar is-black is-fixed-top" role="navigation">
+            <div className="navbar-brand">
+                <a className="navbar-item" href="https://bulma.io">
+                    {/* <img src="logo here " width="112" height="28"/> */}
+                    Logo here
+                </a>
+
+                <a role="button" 
+                className={`navbar-burger ${isActive ? "is-active" : ""}`} 
+                onClick={handleToggle} 
+                aria-label="menu" 
+                aria-expanded="false"
+                data-target="navbar-menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div className={`navbar-menu ${isActive ? "is-active" : ""}`} id="navbar-menu">
                 <div className="navbar-end">
-                    <NavLink to="/" exact  activeClassName="has-background-white has-text-dark" className="navbar-item">Home </NavLink>
-                    <NavLink to="/menu" exact  activeClassName="has-background-white has-text-dark" className="navbar-item">Menu </NavLink>
-                    <NavLink to="/location" exact  activeClassName="has-background-white has-text-dark" className="navbar-item">Location </NavLink>
-                    <NavLink to="/order" exact  activeClassName="has-background-white has-text-dark" className="navbar-item">Order Online </NavLink>
-                    <NavLink to="/signin" exact  activeClassName="has-background-white has-text-dark" className="navbar-item">Sign In </NavLink>
-                    <NavLink to="/signup" exact activeClassName="has-background-white has-text-dark" className="navbar-item">Sign Up </NavLink>
+                    <NavLink to="/" exact  activeClassName="bordered-active" className="navbar-item">Home </NavLink>
+                    <NavLink to="/menu" exact  activeClassName="bordered-active" className="navbar-item">Menu </NavLink>
+                    <NavLink to="/location" exact  activeClassName="bordered-active" className="navbar-item">Location </NavLink>
+                    <NavLink to="/order" exact  activeClassName="bordered-active" className="navbar-item">Order Online </NavLink>
+                    <NavLink to="/signin" exact  activeClassName="bordered-active" className="navbar-item">Sign In </NavLink>
+                    <NavLink to="/signup" exact activeClassName="bordered-active" className="navbar-item">Sign Up </NavLink>
                 </div>
             </div>
         </nav>
     )
 }
 
-
-{/* <div>
-<nav>
-        <NavLink to="/" exact activeStyle={{color: 'red'}}>Home </NavLink>
-        <NavLink to="/menu" exact activeStyle={{color: 'red'}}>Menu </NavLink>
-        <NavLink to="/location" exact activeStyle={{color: 'red'}}>Location </NavLink>
-        <NavLink to="/order" exact activeStyle={{color: 'red'}}>Order Online </NavLink>
-        <NavLink to="/signin" exact activeStyle={{color: 'red'}}>Sign In </NavLink>
-        <NavLink to="/signup" exact activeStyle={{color: 'red'}}>Sign Up </NavLink>
-</nav>
-<Switch>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/menu" component={Menu} />
-    <Route exact path="/location" component={Location} />
-    <Route  path="/order" component={Order} />
-    <Route  path="/signin" component={Signin} />
-    <Route exact path="/signup" component={Signup} />
-</Switch>
-<Footer/>
-</div> */}
 export default NavBar
