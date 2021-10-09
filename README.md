@@ -1,4 +1,9 @@
 To run this app:
+##
+```bash
+# install dependencies
+npm install
+```
 ### `npm start`
 
 Runs the app in the development mode.\
