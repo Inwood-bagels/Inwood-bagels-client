@@ -26,3 +26,5 @@ a commit of the type feat introduces a new feature to the codebase (this correla
 
 ## Screenshot, October 5th - what we have so far: 
 <img width="1438" alt="Screen Shot 2021-10-04 at 9 09 40 PM" src="https://user-images.githubusercontent.com/38446114/135945015-59d34dcd-25a1-49e4-b905-5db5d084aced.png">
+## Screenshot, October 10th - what we have so far: 
+<img width="1440" alt="Screen Shot 2021-10-10 at 12 40 55 PM" src="https://user-images.githubusercontent.com/38446114/136705579-c5421c00-80aa-40af-85bc-0edcbaafc064.png">
