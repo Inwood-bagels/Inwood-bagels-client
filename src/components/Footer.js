@@ -1,5 +1,7 @@
 import React from "react";
 import image from '../images/icons8-instagram.svg'
+import '../styles/styles.css'
+
 const Footer = () => (
     <footer className="footer has-background-black-bis has-text-white">
         <div className="columns has-text-centered level">
