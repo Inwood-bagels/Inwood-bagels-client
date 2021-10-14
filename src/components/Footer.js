@@ -13,8 +13,18 @@ const Footer = () => (
                     </figure>
                 </div>
             </div>
-            <div className="column">Phone number: (212) 569-7770</div>
-            <div className="column">Address: 628 W 207th St, New York, NY 10034</div>
+            <div className="column">
+                <div className="row">
+                    Phone number: (212) 569-7770</div>
+                <div>
+                    Address: 628 W 207th St, New York, NY 10034
+                </div>
+            </div>
+            <div className="column">
+                <div>Hours of Operation:</div>
+                <div>Monday: Closed</div>
+                <div>Tuesday-Sunday: 8 AM to 3 PM</div>
+            </div>
             <div className="column">We are hiring! Come visit us in person to apply!</div>
         </div>
     </footer>
