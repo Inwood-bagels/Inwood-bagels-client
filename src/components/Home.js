@@ -39,7 +39,7 @@ function Home() {
                             <img src={inside} className="photo"/>
                             <div className="content">
                                 <h3 style={{backgroundColor: "lightgrey"}}>Since May of 2017, Inwood Bagels has been
-                                    serving the community with its sift
+                                    serving the community with its soft
                                     bagels,
                                     and over a dozen of its homamade flavored cream cheese's. </h3>
                             </div>

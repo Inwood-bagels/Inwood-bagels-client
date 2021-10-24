@@ -13,7 +13,8 @@ function NavBar() {
         <nav className="navbar is-black is-fixed-top" role="navigation">
             <div className="navbar-brand">
                 <a className="navbar-item" href="https://bulma.io">
-                    <img src={logo} width="66" height="28"/>
+                    <img src={logo}/>
+                    {/*width="112" height="28"*/}
                 </a>
 
                 <a role="button"
