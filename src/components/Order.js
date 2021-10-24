@@ -3,8 +3,18 @@ import Signup from "./Signup";
 
 function Order() {
     return (
-        <h1>Order Online</h1>
-    )
+        <section className="hero">
+            <div className="hero-body">
+                <div className="is-flex is-justify-content-center">
+
+                    <div className="content" style={{  height: "700px",
+                        width: "100%"}}>
+                        <h3 style={{backgroundColor: "white"}}> there will be ORDRR ONLINE FOR PICKUP/DELIVERY</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>    )
 }
 
 export default Order
