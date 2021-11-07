@@ -2,8 +2,18 @@ import React, {useState} from 'react'
 
 function Location() {
     return (
-        <h1>Location</h1>
-    )
+        <section className="hero">
+            <div className="hero-body">
+                <div className="is-flex is-justify-content-center">
+
+                    <div className="content" style={{  height: "700px",
+                        width: "100%"}}>
+                        <h3 style={{backgroundColor: "white"}}> there will be GOOGLE MAPS SOON!</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>    )
 }
 
 export default Location
