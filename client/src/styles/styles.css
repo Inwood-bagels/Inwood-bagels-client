@@ -5,17 +5,9 @@
 
 
 footer{
-    position:absolute;
+    position:fixed;
     bottom:0;
     display:block;
     width:100%;
     padding: 0px !important;  /* same size as header */
-}
-
-.lable {
-    color: gray;
-}
-
-.columns is-flex {
-    display: flex;
 }

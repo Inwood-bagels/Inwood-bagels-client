@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import "../styles/styles.css"
+import "../styles/Styles.css"
+import "../styles/menu.css"
 import { Carousel } from "react-responsive-carousel";
 import storeFront from "../images/Pictures/Store Front 2.JPG";
 import bagels from "../images/Pictures/Cinnamon Raisin Bagel with Birthday Cake Cream Cheese 3.JPG";
@@ -13,6 +14,7 @@ function menuList(listOfItems) {
         <option key={item} value={item}>{item}</option>
     ))
 }
+
 
 function Menu() {
 
@@ -27,84 +29,61 @@ function Menu() {
             <div className="content has-text-centered">
                 <h1 className="is-size-1">Menu</h1>
             </div>
-            <div className="columns is-flex">
-                <div className="column is-flex">
-                    <div className="field">
-                        <label className="label">Breakfast</label>
-                        <div className="control">
-                            <select>
+            <div className="Flex">
+                <div className="Flex1">
+                    <div className="column is-flex">
+                        <div className="field">
+                            <select className="label">
                                 {menuList(breakfast)}
-                            </select>
+                                Breakfast
+                            </select>                            
                         </div>
                     </div>
-                </div>
-                <div className="column is-flex">
-                    <div className="field">
-                        <label className="label">Beverages</label>
-                        <div className="control">
-                            <select>
-                                {menuList(beverages)}
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div className="column is-flex">
-                    <div className="field">
-                        <label className="label">Homemade by the pound</label>
-                        <div className="control">
-                            <select>
+                    <div className="column is-flex">
+                        <div className="field">
+                            <select className="label">
                                 {menuList(homemade)}
-                            </select>
+                            </select>                            
                         </div>
                     </div>
-                </div>
-                <div className="column is-flex">
-                    <div className="field">
-                        <label className="label">Lunch</label>
-                        <div className="control">
-                            <select>
-                                {menuList(lunch)}
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div className="column is-flex">
-                    <div className="field">
-                        <label className="label">Pastries and Doughnuts</label>
-                        <div className="control">
-                            <select>
+                    <div className="column is-flex">
+                        <div className="field">
+                            <select className="label">
                                 {menuList(doughnuts)}
-                            </select>
+                            </select>                            
+                        </div>
+                    </div>
+                    <div className="column is-flex">
+                        <div className="field">
+                            <label className="label">Catering Services</label>
                         </div>
                     </div>
                 </div>
+                <div className="Flex2">
                 <div className="column is-flex">
-                    <div className="field">
-                        <label className="label">Healthy Dishes</label>
-                        <div className="control">
-                            <select>
+                        <div className="field">
+                            <select className="label">
+                                {menuList(beverages)}
+                            </select>                            
+                        </div>
+                    </div>
+                    <div className="column is-flex">
+                        <div className="field">
+                            <select className="label">
+                                {menuList(lunch)}
+                            </select>                            
+                        </div>
+                    </div>
+                    <div className="column is-flex">
+                        <div className="field">
+                            <select className="label">
                                 {menuList(health)}
-                            </select>
+                            </select>                            
                         </div>
                     </div>
-                </div>
-                <div className="column is-flex">
-                    <div className="field">
-                        <label className="label">Catering Services</label>
-                        <div className="control">
-                            <select>
-                                {menuList(beverages)}
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div className="column is-flex">
-                    <div className="field">
-                        <label className="label">Bagels By The Dozen</label>
-                        <div className="control">
-                            <select>
-                                {menuList(beverages)}
-                            </select>
+                    <div className="column is-flex">
+                        <div className="field">
+                            <label className="label">Bagels By The Dozen</label>
                         </div>
                     </div>
                 </div>
