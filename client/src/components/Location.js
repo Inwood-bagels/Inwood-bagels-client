@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 function Location() {
     return (
@@ -6,14 +6,16 @@ function Location() {
             <div className="hero-body">
                 <div className="is-flex is-justify-content-center">
 
-                    <div className="content" style={{  height: "700px",
-                        width: "100%"}}>
+                    <div className="content" style={{
+                        height: "700px",
+                        width: "100%"
+                    }}>
                         <h3 style={{backgroundColor: "white"}}> there will be GOOGLE MAPS SOON!</h3>
                     </div>
 
                 </div>
             </div>
-        </section>    )
+        </section>)
 }
 
 export default Location

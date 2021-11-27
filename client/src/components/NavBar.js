@@ -4,7 +4,7 @@ import "../styles/Navbar.css"
 import logo from '../images/Large inwood bagels logo.jpeg'
 
 function NavBar() {
-    const [isActive, setActive] = useState(false);
+    const [isActive, setActive] = useState(false)
 
     const handleToggle = () => {
         setActive(!isActive);

@@ -1,20 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import "../styles/Styles.css"
-import "../styles/menu.css"
-import { Carousel } from "react-responsive-carousel";
-import storeFront from "../images/Pictures/Store Front 2.JPG";
-import bagels from "../images/Pictures/Cinnamon Raisin Bagel with Birthday Cake Cream Cheese 3.JPG";
-import inside from "../images/Pictures/Inside store 1.JPG";
-import baconEgg from "../images/Pictures/Bacon Egg and Cheese.JPG";
-import brioce from "../images/Pictures/Ultimate Bacon Egg and Cheese on a Brioche.JPG";
-
-function menuList(listOfItems) {
-    return listOfItems.map((item) => (
-        <option key={item} value={item}>{item}</option>
-    ))
-}
-
+import '../styles/styles.css'
 
 function Menu() {
 
@@ -36,21 +21,21 @@ function Menu() {
                             <select className="label">
                                 {menuList(breakfast)}
                                 Breakfast
-                            </select>                            
+                            </select>
                         </div>
                     </div>
                     <div className="column is-flex">
                         <div className="field">
                             <select className="label">
                                 {menuList(homemade)}
-                            </select>                            
+                            </select>
                         </div>
                     </div>
                     <div className="column is-flex">
                         <div className="field">
                             <select className="label">
                                 {menuList(doughnuts)}
-                            </select>                            
+                            </select>
                         </div>
                     </div>
                     <div className="column is-flex">
@@ -60,25 +45,25 @@ function Menu() {
                     </div>
                 </div>
                 <div className="Flex2">
-                <div className="column is-flex">
+                    <div className="column is-flex">
                         <div className="field">
                             <select className="label">
                                 {menuList(beverages)}
-                            </select>                            
+                            </select>
                         </div>
                     </div>
                     <div className="column is-flex">
                         <div className="field">
                             <select className="label">
                                 {menuList(lunch)}
-                            </select>                            
+                            </select>
                         </div>
                     </div>
                     <div className="column is-flex">
                         <div className="field">
                             <select className="label">
                                 {menuList(health)}
-                            </select>                            
+                            </select>
                         </div>
                     </div>
                     <div className="column is-flex">
@@ -91,4 +76,12 @@ function Menu() {
         </div>
     )
 }
+
+
+function menuList(listOfItems) {
+    return listOfItems.map((item) => (
+        <option key={item} value={item}>{item}</option>
+    ))
+}
+
 export default Menu

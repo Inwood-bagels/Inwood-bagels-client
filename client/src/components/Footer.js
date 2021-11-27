@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import image from '../images/icons8-instagram.svg'
 import '../styles/styles.css'
 
@@ -15,7 +15,8 @@ const Footer = () => (
             </div>
             <div className="column">
                 <div className="row">
-                    Phone number: (212) 569-7770</div>
+                    Phone number: (212) 569-7770
+                </div>
                 <div>
                     Address: 628 W 207th St, New York, NY 10034
                 </div>
@@ -28,6 +29,6 @@ const Footer = () => (
             <div className="column">We are hiring! Come visit us in person to apply!</div>
         </div>
     </footer>
-);
+)
 
-export default Footer;
+export default Footer

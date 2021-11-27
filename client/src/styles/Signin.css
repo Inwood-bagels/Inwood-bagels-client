@@ -1,0 +1,33 @@
+.signin {
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signin_container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+}
+.signin_textBox {
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black;
+}
+.signin_btn {
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border: none;
+    color: white;
+    background-color: black;
+}
+.signin_google {
+    background-color: #4285f4;
+}
+.signin div {
+    margin-top: 7px;
+}
