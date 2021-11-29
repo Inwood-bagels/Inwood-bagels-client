@@ -16,7 +16,7 @@ function Signin() {
             // maybe trigger a loading screen
             return
         }
-        // if (user) history.replace("/home");
+        if (user) history.replace("/menu")
 
     }, [user, loading])
 
