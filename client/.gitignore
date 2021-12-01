@@ -1,4 +1,3 @@
-
 # dependencies
 /node_modules
 /.pnp
@@ -6,6 +5,9 @@
 
 # testing
 /coverage
+
+#credentials
+/src/credentials.js
 
 # production
 /build
@@ -16,7 +18,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
-
+.env
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
