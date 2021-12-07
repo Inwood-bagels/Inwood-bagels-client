@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import '../styles/styles.css'
+import '../styles/Menu.css'
 import {db} from "../firebase";
 import Collapsible from 'react-collapsible';
 import Items from "./Items";
