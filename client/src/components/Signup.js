@@ -6,7 +6,7 @@ import {
     registerWithEmailAndPassword,
     signInWithGoogle,
 } from '../firebase'
-import '../styles/Signup.css'
+import '../styles/styles.css'
 
 function Signup() {
 
