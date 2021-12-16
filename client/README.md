@@ -17,7 +17,7 @@ npm build
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-#Commit Messages - IMPORTANT!
+# Commit Messages - IMPORTANT!
 
 The commit message should be structured as follows
 
@@ -31,7 +31,7 @@ a commit of the type fix patches a bug in your codebase (this correlates with PA
 ### `feat: `
 a commit of the type feat introduces a new feature to the codebase (this correlates with MINOR in semantic versioning).
 
-#Branching - IMPORTANT!
+# Branching - IMPORTANT!
 
 We never work on the ```main``` branch. 
 If you are working on the feature/bug/etc., you need to create a local branch first, 
