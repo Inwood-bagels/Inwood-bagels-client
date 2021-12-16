@@ -10,83 +10,36 @@ function Profile() {
     const [name, setName] = useState("")
     const [address, setAddress] = useState("")
     const [city, setCity] = useState("")
-    const [stateUs, setStateUs] = useState("")
+    const [stateUS, setStateUS] = useState("")
     const [zip, setZip] = useState("")
     const [user, loading, error] = useAuthState(auth)
-    const [userId, setUserId] = useState("")
     const history = useHistory()
-    const [menu, setMenu] = useState([])
-    const [currentUser, setUser] = useState({})
 
-    const getUserData = async () => {
-        try{
-            const res = db.collection('users').where(db.FieldPath.documentId(), '==', user.uid).get()
-            const data = await res.get()
-            setTimeout(3000)
-            if (!data.exists) {
-                console.log('No such document!');
-            } else {
-                console.log('Document data:', data.data());
-                setUser(data)
-            }
-        }catch (e) {
-            console.log(e)
+    const fetchUser = async () => {
+        try {
+            const query = await db
+                .collection("users")
+                .where("uid", "==", user?.uid)
+                .get();
+            const data = await query.docs[0].data();
+            setName(data.name);
+            setEmail(data.email)
+            setAddress(data.address);
+            setCity(data.city);
+            setStateUS(data.state)
+            setZip(data.zip)
+
+            console.log("state", stateUS)
+        } catch (err) {
+            console.error(err);
+            alert("An error occured while fetching user data");
         }
-
-    }
-
-    function onAuthStateChange() {
-        auth.onAuthStateChanged(user => {
-            if (user) {
-                console.log("The user is logged in")
-                return user.uid
-            } else {
-                console.log("The user is not logged in");
-            }
-        });
-    }
-
-    const users = async () => {
-        const newItems = []
-        const res = db.collection("users")
-        const data = await res.get()
-        data.docs.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            newItems.push(doc.data())
-        })
-        setMenu(menu.concat(newItems))
-    }
-
+    };
     useEffect(() => {
-        users()
-        console.log(user.uid)
-        console.log(menu)
-    }, []);
-
-    useEffect(() =>{
-        getUserData()
-        console.log()
-    })
-    function trial(array) {
-        for (let i = 0; i <array.length; i++) {
-            if (array[i].uid === userId) {
-                setUser(array[i].uid)
-            }
-        }
-    }
-    trial(menu)
-
-    // useEffect(() => {
-    //    let myId =  onAuthStateChange()
-    //     // let userID = auth.currentUser.uid;
-    //
-    //     let user = doGetUserProfile(userId, ()=> console.log("MASDA"))
-    //     console.log(user)
-    //     // console.log(myId)
-    //     // setUserId(myId)
-    //     // console.log(userId)
-    //     // getUserData()
-    // }, []);
+        if (loading) return;
+        if (!user) return history.replace("/");
+        fetchUser();
+    }, [user, loading]);
 
     return (
         <div className="container">
@@ -133,8 +86,8 @@ function Profile() {
                                 <input
                                     type="text"
                                     className="signup_textBox"
-                                    value={stateUs}
-                                    placeholder={stateUs}
+                                    value={stateUS}
+                                    placeholder={stateUS}
                                 />
                             </div>
                             <div>

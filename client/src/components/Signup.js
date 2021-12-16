@@ -16,7 +16,7 @@ function Signup() {
     const [name, setName] = useState("")
     const [address, setAddress] = useState("")
     const [city, setCity] = useState("")
-    const [stateUs, setStateUs] = useState("")
+    const [stateUS, setStateUs] = useState("")
     const [zip, setZip] = useState("")
     const [user, loading, error] = useAuthState(auth)
     const history = useHistory()
@@ -24,7 +24,7 @@ function Signup() {
     const register = () => {
         if (!name) alert("Please enter name")
         if (password !== checkPassword) alert("Passwords do not match")
-        registerWithEmailAndPassword(name, email, password).then(r => console.log(user))
+        registerWithEmailAndPassword(name, email, password, address, city, stateUS, zip).then(r => console.log(user))
     };
     useEffect(() => {
         if (loading) return
@@ -100,7 +100,7 @@ function Signup() {
                         <input
                             type="text"
                             className="signup_textBox"
-                            value={stateUs}
+                            value={stateUS}
                             onChange={(e) => setStateUs(e.target.value)}
                             placeholder="State"
                         />

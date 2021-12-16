@@ -1,30 +1,44 @@
-To run this app:
-##
+# To run this app:
+### you need to be in the ```/client``` folder
+
 ```bash
 # install dependencies
 npm install
 ```
-### `npm start`
+```bash
+# to run the app
+npm start
+```
+
+```bash
+# to build the app
+npm build
+```
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-#Commit Messages
+# Commit Messages - IMPORTANT!
 
 The commit message should be structured as follows
 
-### `<type>[optional scope]: <description>`
+####`<type>[optional scope]: <description>`
 Example: \
 feat(lang): added French language \
 fix(server): fixed 404 error in /GET requests
 
-### `fix:` 
+###`fix:`
 a commit of the type fix patches a bug in your codebase (this correlates with PATCH in semantic versioning).
-### `feat: `
+###`feat: `
 a commit of the type feat introduces a new feature to the codebase (this correlates with MINOR in semantic versioning).
 
-# SCREENSHOTS. Please, add here the screenshots so that everyone could see the progress withour running an app: 
+# Branching - IMPORTANT!
 
-## Screenshot, October 5th - what we have so far: 
-<img width="1438" alt="Screen Shot 2021-10-04 at 9 09 40 PM" src="https://user-images.githubusercontent.com/38446114/135945015-59d34dcd-25a1-49e4-b905-5db5d084aced.png">
-## Screenshot, October 10th - what we have so far: 
-<img width="1440" alt="Screen Shot 2021-10-10 at 12 40 55 PM" src="https://user-images.githubusercontent.com/38446114/136705579-c5421c00-80aa-40af-85bc-0edcbaafc064.png">
+We never work on the ```main``` branch.
+If you are working on the feature/bug/etc., you need to create a local branch first,
+preferably in the following format:
+
+```<your name>/<work scope>```
+
+For example:  ```masha/orderBackend```
+
+When you finish your work, you should open a Pull Request and wait for a reviewer to approve the changes. We never push to the  ```main``` branch. We never merge the PR without it to be reviewed AND approved.  
