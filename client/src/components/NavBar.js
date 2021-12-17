@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import '../styles/Navbar.css'
+import '../styles/styles.css'
 import logo from '../images/Large inwood bagels logo.jpeg'
 import {useAuthState} from 'react-firebase-hooks/auth'
 import {auth} from '../firebase'
