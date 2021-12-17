@@ -41,4 +41,5 @@ preferably in the following format:
 
 For example:  ```masha/orderBackend```
 
+
 When you finish your work, you should open a Pull Request and wait for a reviewer to approve the changes. We never push to the  ```main``` branch. We never merge the PR without it to be reviewed AND approved.  
