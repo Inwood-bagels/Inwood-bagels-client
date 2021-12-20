@@ -45,6 +45,7 @@ function Profile() {
         <div className="container">
             <div className="Flex">
                 <div className="Flex1">
+                    <h1>Profile</h1>
                     <div className="signup">
                         <div>
                             <div>
@@ -99,7 +100,6 @@ function Profile() {
                                     placeholder={zip}
                                 />
                             </div>
-
                         </div>
                     </div>
                 </div>

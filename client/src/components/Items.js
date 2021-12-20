@@ -22,13 +22,17 @@ function Items() {
 
     return (
         <div className="container">
-            <div>
+            <div className="container">
                 {
                     items.map(((item, ind) =>
-                            <div  key={ind}>
-                                <h1 color="red">{item.item_name}</h1>
+
+                            <div  key={ind+3} className="menu_items">
+                                <h4>{item.item_name}</h4>
                                 <h2>{item.item_desc}</h2>
-                                <p>Price: {item.item_price}</p>
+
+                                <p>Price: ${item.item_price}</p>
+                                <input type="radio" value="Price" name="Item" /> Add to cart
+
 
                             </div>
                     ))
