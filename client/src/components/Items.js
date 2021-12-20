@@ -33,7 +33,6 @@ function Items() {
                                 <p>Price: ${item.item_price}</p>
                                 <input type="radio" value="Price" name="Item" /> Add to cart
 
-
                             </div>
                     ))
                 }
