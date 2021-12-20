@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import '../styles/styles.css'
-import '../styles/Item.css'
 import {db} from "../firebase";
 
 function Items() {
