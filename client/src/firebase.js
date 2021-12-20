@@ -42,7 +42,7 @@ const signInWithEmailAndPassword = async (email, password) => {
     }
 }
 
-const registerWithEmailAndPassword = async (name, email, password) => {
+const registerWithEmailAndPassword = async (name, email, password, address, city, stateUS, zip) => {
     try {
         const res = await auth.createUserWithEmailAndPassword(email, password);
         const user = res.user;
@@ -51,6 +51,10 @@ const registerWithEmailAndPassword = async (name, email, password) => {
             name,
             authProvider: "local",
             email,
+            address,
+            city,
+            stateUS,
+            zip
         })
     } catch (err) {
         console.error(err);
@@ -71,9 +75,6 @@ const sendPasswordResetEmail = async (email) => {
 const logout = () => {
     auth.signOut()
 }
-
-
-
 
 export {
     auth,
