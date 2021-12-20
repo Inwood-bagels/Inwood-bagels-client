@@ -22,13 +22,13 @@ function Items() {
 
     return (
         <div className="container">
-            <div>
+            <div className="item_container">
                 {
                     items.map(((item, ind) =>
-                            <div  key={ind}>
-                                <h1 color="red">{item.item_name}</h1>
-                                <h2>{item.item_desc}</h2>
-                                <p>Price: {item.item_price}</p>
+                            <div className="item_s" key={ind}>
+                                <h5 className="item_name" color="red">{item.item_name} Price: {item.item_price} </h5>
+                                <h2 className="item_desc">{item.item_desc}</h2>
+                                
 
                             </div>
                     ))
