@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import '../styles/styles.css'
-import '../styles/Menu.css'
-import {db} from "../firebase";
-import Collapsible from 'react-collapsible';
-import Items from "./Items";
+import {db} from "../firebase"
+import Collapsible from 'react-collapsible'
+import Items from "./Items"
 
 function Menu() {
     const [menu, setMenu] = useState([])
@@ -25,7 +24,17 @@ function Menu() {
     return (
         <div className="container">
             <div className="Flex">
+                <div className="column is-flex">
+                    <button className="item_s ">Pick up</button>
+                    <button className="item_s ">Delivery</button>
+                </div>
+
+            </div>
+
+
+            <div className="Flex">
                 <div className="Flex1">
+
                     {
                         menu.map(((item, ind) =>
                                 <div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/Navbar.css'
+import '../styles/styles.css'
 import {NavLink} from 'react-router-dom'
 import '../firebase'
 import {logout} from "../firebase";
@@ -13,7 +13,8 @@ function NavBarLogged() {
                      className="navbar-item">Location </NavLink>
             <NavLink to="/order" exact activeClassName="bordered-active" className="navbar-item">Order
                 Online </NavLink>
-            <button onClick={logout}>Log out</button>
+            <NavLink to="/settings" exact activeClassName="bordered-active" className="navbar-item">Settings </NavLink>
+            <button className="navbar-button" onClick={logout}>Log out</button>
         </div>
     )
 }

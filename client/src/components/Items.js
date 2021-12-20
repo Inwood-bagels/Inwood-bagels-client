@@ -35,11 +35,6 @@ function Items() {
                     ))
                 }
             </div>
-
-
-            {console.log("return", items)
-            }
-
         </div>
     )
 

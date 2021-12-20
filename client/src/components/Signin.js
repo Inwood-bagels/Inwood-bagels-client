@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
-import { auth, signInWithEmailAndPassword, signInWithGoogle } from '../firebase'
-import { useAuthState } from 'react-firebase-hooks/auth'
-import '../styles/Signin.css'
+import React, {useEffect, useState} from 'react'
+import {Link, useHistory} from 'react-router-dom'
+import {auth, signInWithEmailAndPassword, signInWithGoogle} from '../firebase'
+import {useAuthState} from 'react-firebase-hooks/auth'
+import '../styles/styles.css'
 
 function Signin() {
 
