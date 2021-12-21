@@ -26,7 +26,7 @@ function Profile() {
             setEmail(data.email)
             setAddress(data.address);
             setCity(data.city);
-            setStateUS(data.state)
+            setStateUS(data.stateUS)
             setZip(data.zip)
 
             console.log("state", stateUS)
@@ -42,13 +42,12 @@ function Profile() {
     }, [user, loading]);
 
     return (
-        <div className="container">
-            <div className="Flex">
-                <div className="Flex1">
-                    <h1>Profile</h1>
-                    <div className="signup">
-                        <div>
-                            <div>
+        <div className="signup2">
+            <div className="signup_container2">
+                    <div className='details_address2'>
+                        <div className='user_details'>
+                            <h1>Profile Page</h1>
+                            <div className='fill_in'>
                                 Name
                                 <input
                                     type="text"
@@ -57,16 +56,21 @@ function Profile() {
                                     placeholder={user.name}
                                 />
                             </div>
-                            <div> Email Address
+                            <div className='fill_in'>
+                                Email Address
                                 <input
                                     type="text"
                                     className="signup_textBox"
                                     value={email}
                                     placeholder={email}
                                 /></div>
-                            Delivery Address
-                            <div>
-                                Address
+
+                        </div>
+                        <div className='address'>
+
+                            <h2>Delivery Address</h2>
+                            <div className='address_column'>
+                                <p className='address_fill'>Address</p>
                                 <input
                                     type="text"
                                     className="signup_textBox"
@@ -75,15 +79,15 @@ function Profile() {
                                 />
                             </div>
 
-                            <div> City
-                                <input
-                                    type="text"
-                                    className="signup_textBox"
-                                    value={city}
-                                    placeholder={city}
-                                /></div>
-                            <div>
-                                State
+                            <div className='address_column'>
+                                <p className='address_fill'>City</p>                                <input
+                                type="text"
+                                className="signup_textBox"
+                                value={city}
+                                placeholder={city}
+                            /></div>
+                            <div className='address_column'>
+                                <p className='address_fill'> State </p>
                                 <input
                                     type="text"
                                     className="signup_textBox"
@@ -91,8 +95,8 @@ function Profile() {
                                     placeholder={stateUS}
                                 />
                             </div>
-                            <div>
-                                Zip Code
+                            <div className='address_column'>
+                                <p className='address_fill'> Zip Code </p>
                                 <input
                                     type="zip"
                                     className="signup_textBox"
@@ -103,7 +107,6 @@ function Profile() {
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     )
 }
