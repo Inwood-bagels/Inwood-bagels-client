@@ -26,10 +26,10 @@ function Items() {
                 {
                     items.map(((item, ind) =>
                             <div className="item_s" key={ind}>
-                                <h5 className="item_name" color="red">{item.item_name} Price: {item.item_price} </h5>
+                                <h5 className="item_name" color="red">{item.item_name} Price: {item.item_price} 
+                                <button className="add">Add to cart</button>
+                                </h5>
                                 <h2 className="item_desc">{item.item_desc}</h2>
-                                
-
                             </div>
                     ))
                 }

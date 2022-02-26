@@ -321,3 +321,12 @@ h2 {
     color: white;
     background-color: black;
 }
+
+
+/* Cart */
+
+.add {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
