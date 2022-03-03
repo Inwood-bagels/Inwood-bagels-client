@@ -3,12 +3,13 @@
     width: 50px;
 }
 
-footer{
-    position:fixed;
-    bottom:0;
-    display:block;
-    width:100%;
-    padding: 0px !important;  /* same size as header */
+footer {
+    position: fixed;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    padding: 0px !important;
+    /* same size as header */
 }
 
 .bordered-active {
@@ -22,11 +23,10 @@ footer{
 .navbar-button {
     margin-bottom: 5px;
     color: black;
-
 }
 
 .column.is-flex {
-    display:flex;
+    display: flex;
     font-weight: bold;
     font-size: 24px;
     color: rgba(0, 0, 2, 0.76);
@@ -40,10 +40,12 @@ footer{
     flex: 0 0 100%;
     width: 180%;
 }
+
 
 /* menu styling */
+
 .column.is-flex {
-    display:flex;
+    display: flex;
     font-weight: bold;
     font-size: 24px;
     color: rgba(0, 0, 2, 0.76);
@@ -58,7 +60,9 @@ footer{
     width: 180%;
 }
 
+
 /* item styling */
+
 .item_s {
     display: flex;
     color: grey;
@@ -78,6 +82,7 @@ footer{
     display: flex;
     flex-direction: column;
 }
+
 h5 {
     display: flex;
     color: rgb(10, 10, 10);
@@ -103,7 +108,9 @@ h2 {
     width: 180%;
 }
 
+
 /* signin */
+
 .signin {
     height: 70vh;
     width: 100vw;
@@ -112,6 +119,7 @@ h2 {
     justify-content: center;
     font-family: Arial;
 }
+
 .signin_container {
     display: flex;
     flex-direction: column;
@@ -120,25 +128,30 @@ h2 {
     font-weight: bold;
     justify-content: space-between;
 }
+
 .signin_textBox {
     padding: 4px;
     font-size: 15px;
     margin-bottom: 10px;
     color: black;
 }
+
 .email_box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .password_box {
     display: flex;
     flex-direction: column;
 }
+
 .btns {
     display: flex;
     flex-direction: column;
 }
+
 .signin_btn {
     padding: 10px;
     font-size: 18px;
@@ -147,14 +160,18 @@ h2 {
     color: white;
     background-color: black;
 }
+
 .signin_google {
     background-color: #4285f4;
 }
+
 .signin div {
     margin-top: 7px;
 }
 
+
 /* signup */
+
 .signup {
     height: 100vh;
     width: 100vw;
@@ -162,6 +179,7 @@ h2 {
     align-items: center;
     justify-content: center;
 }
+
 .signup_container {
     display: flex;
     flex-direction: column;
@@ -170,36 +188,43 @@ h2 {
     width: 70%;
     height: 90%;
 }
+
 .details_address {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
+
 .address_fill {
     display: flex;
     justify-content: space-between;
     width: 20%;
 }
+
 .user_details {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 65vh;
 }
+
 ::placeholder {
     font-size: 13px;
     color: darkgray;
 }
+
 .address {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 55vh;
 }
+
 .address_column {
     display: flex;
     justify-content: space-between;
     width: 90%;
 }
+
 p {
     display: flex;
     flex-direction: row;
@@ -207,6 +232,7 @@ p {
     font-size: 18px;
     font-weight: bold;
 }
+
 .signup_textBox {
     display: flex;
     flex-direction: column;
@@ -218,6 +244,7 @@ p {
     width: 60%;
     height: 80%;
 }
+
 .signup_btn {
     padding: 10px;
     font-size: 18px;
@@ -226,22 +253,80 @@ p {
     color: white;
     background-color: black;
 }
+
 .signup_google {
     background-color: #4285f4;
 }
+
 .signup div {
     margin-top: 20px;
 }
+
 .fill_in {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
     font-weight: bold;
 }
+
 h1 {
     font-weight: bolder;
 }
+
 h2 {
     font-weight: bolder;
     text-align: center;
+}
+
+
+/* Password Reset */
+
+.resetpassword {
+    align-items: center;
+    padding: 200px;
+    padding-left: 490px;
+    width: 83%;
+}
+
+.password_container {
+    box-shadow: 6px 6px 8px 2px rgba(0.3, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+    height: 200px;
+    justify-content: space-between;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.email_textBox {
+    padding: 6px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.submit_btn {
+    padding: 6px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border: none;
+    color: white;
+    background-color: black;
+}
+
+
+/* Cart */
+
+.add {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
 }

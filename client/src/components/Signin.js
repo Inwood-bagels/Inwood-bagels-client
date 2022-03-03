@@ -55,10 +55,10 @@ function Signin() {
                     Sign in with Google
                 </button>
                 <div>
-                    Forgot Password? <Link to="/reset">Click here to reset password</Link>
+                    Forgot Password? Click <Link to="/resetpassword"> here </Link> to reset
                 </div>
                 <div>
-                    Don't have an account? <Link to="/signup">Sign up here</Link>
+                    Don't have an account? <Link to="/signup"> Sign up here </Link>
                 </div>
             </div>
         </div>
