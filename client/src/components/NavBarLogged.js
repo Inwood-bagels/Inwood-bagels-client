@@ -14,6 +14,7 @@ function NavBarLogged() {
             {/*<NavLink to="/order" exact activeClassName="bordered-active" className="navbar-item">Order*/}
             {/*    Online </NavLink>*/}
             <NavLink to="/settings" exact activeClassName="bordered-active" className="navbar-item">Profile </NavLink>
+
             <button className="navbar-button" onClick={logout}>Log out</button>
         </div>
     )

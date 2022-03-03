@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/styles.css'
 
-function Order() {
+function Cart() {
     return (
         <section className="hero">
             <div className="hero-body">
@@ -19,4 +19,4 @@ function Order() {
         </section>)
 }
 
-export default Order
+export default Cart
