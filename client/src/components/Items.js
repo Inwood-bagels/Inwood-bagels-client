@@ -1,9 +1,24 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, createContext} from 'react'
+
 import '../styles/styles.css'
 import {db} from "../firebase";
 
 function Items() {
     const [items, setItems] = useState([])
+    const [cart, setCart] = useState([]);
+    const [cartTotal, setCartTotal] = useState(0);
+
+    useEffect(() => {
+        total();
+    }, [cart]);
+
+    const total = () => {
+        let totalVal = 0;
+        for (let i = 0; i < cart.length; i++) {
+            totalVal += cart[i].price;
+        }
+        setCartTotal(totalVal);
+    };
     const [loading, setLoading] = useState(true)
     const DbGetMenu = async () => {
         const newItems = []
@@ -19,7 +34,9 @@ function Items() {
     useEffect(() => {
         DbGetMenu()
     }, []);
-
+    const addToCart = (el) => {
+        setCart([...cart, el]);
+    };
     return (
         <div className="container">
             <div className="container">
@@ -31,8 +48,7 @@ function Items() {
                                 <h2>{item.item_desc}</h2>
 
                                 <p>Price: ${item.item_price}</p>
-                                <input type="radio" value="Price" name="Item" /> Add to cart
-
+                                <button className="add" onClick={() => setCart(item)}>{console.log(cart)}Add to cart</button>
                             </div>
                     ))
                 }

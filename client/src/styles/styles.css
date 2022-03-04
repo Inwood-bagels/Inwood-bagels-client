@@ -9,6 +9,12 @@
     gap: 20px;
     padding-bottom: 40px;
 }
+.container2 {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
+}
 
 footer {
     position: fixed;
@@ -22,6 +28,14 @@ footer {
     height: 100vh;
     width: 100vw;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-empty {
+    height: 100vh;
+    width: 100vw;
+    display: compact;
     align-items: center;
     justify-content: center;
 }
@@ -112,6 +126,7 @@ footer {
     display: block;
     width: 100%;
     padding: 0px !important; /* same size as header */
+    /* same size as header */
 }
 
 .bordered-active {
@@ -133,8 +148,10 @@ footer {
     cursor: pointer;
 }
 
+
 .column.is-flex {
-    font-weight: bold;
+    display: flex;
+    color: black;    font-weight: bold;
     font-size: 24px;
     color: rgba(0, 0, 2, 0.76);
     width: 100%;
@@ -158,6 +175,7 @@ footer {
     height: 200px;
     padding: 10px;
     font-size: 20px;
+    position: center;
     background-position: center;
     background-size: cover;
     filter: contrast(75%);
@@ -168,8 +186,8 @@ footer {
     cursor: pointer;
 }
 
-
 /* menu styling */
+
 .column.is-flex {
     display: flex;
     font-weight: bold;
@@ -186,7 +204,9 @@ footer {
     width: 180%;
 }
 
+
 /* item styling */
+
 .item_s {
     display: flex;
     color: grey;
@@ -267,7 +287,25 @@ h2 {
     width: 180%;
 }
 
+
 /* signin */
+.nav-bag {
+    display: flex;
+    align-items: center;
+}
+.bag-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: yellow;
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    margin-left: 5px;
+}
 .signin {
     height: 70vh;
     width: 100vw;
@@ -326,7 +364,9 @@ h2 {
     margin-top: 7px;
 }
 
+
 /* signup */
+
 .signup {
     height: 100vh;
     width: 100vw;
@@ -353,6 +393,7 @@ h2 {
     display: flex;
     flex-direction: column;
 }
+
 .address_fill {
     display: flex;
     justify-content: space-between;
@@ -440,4 +481,57 @@ h1 {
 h2 {
     font-weight: bolder;
     text-align: center;
+}
+
+
+/* Password Reset */
+
+.resetpassword {
+    align-items: center;
+    padding: 200px;
+    padding-left: 490px;
+    width: 83%;
+}
+
+.password_container {
+    box-shadow: 6px 6px 8px 2px rgba(0.3, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+    height: 200px;
+    justify-content: space-between;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.email_textBox {
+    padding: 6px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.submit_btn {
+    padding: 6px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border: none;
+    color: white;
+    background-color: black;
+}
+
+
+/* Cart */
+
+.add {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
 }
