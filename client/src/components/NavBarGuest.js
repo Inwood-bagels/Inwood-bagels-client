@@ -2,7 +2,6 @@ import React from 'react'
 import '../styles/styles.css'
 import {NavLink} from 'react-router-dom'
 
-
 function NavBarGuest() {
     return (
         <div className="navbar-end">
@@ -16,6 +15,7 @@ function NavBarGuest() {
                 In </NavLink>
             <NavLink to="/signup" exact activeClassName="bordered-active" className="navbar-item">Sign
                 Up </NavLink>
+            <NavLink to="/admin" exact activeClassName="bordered-active" className="navbar-item"> Admin </NavLink>
         </div>
     )
 }
