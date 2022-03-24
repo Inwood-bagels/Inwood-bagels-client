@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react'
 import {useAuthState} from 'react-firebase-hooks/auth'
 import {Link, useHistory} from 'react-router-dom'
 import {
-    adminRegisterWithEmailAndPassword,
     auth,
     registerWithEmailAndPassword,
 } from '../firebase'
@@ -14,18 +13,22 @@ function AdminSignup() {
     const [password, setPassword] = useState("")
     const [checkPassword, setCheckPassword] = useState("")
     const [name, setName] = useState("")
-    const [admin, loading, error] = useAuthState(auth)
+    const [address, setAddress] = useState("")
+    const [city, setCity] = useState("")
+    const [stateUS, setStateUs] = useState("")
+    const [zip, setZip] = useState("")
+    const [user, loading, error] = useAuthState(auth)
     const history = useHistory()
 
     const register = () => {
         if (!name) alert("Please enter name")
         if (password !== checkPassword) alert("Passwords do not match")
-        adminRegisterWithEmailAndPassword(name, password, email).then(r => console.log(admin))
+        registerWithEmailAndPassword(name, email, password, address, city, stateUS, zip).then(r => console.log(user))
     };
     useEffect(() => {
         if (loading) return
-        if (admin) history.replace("/adminaccount")
-    }, [admin, loading])
+        if (user) history.replace("/menu")
+    }, [user, loading])
 
     return (
         <div className="adminsignup">
@@ -55,17 +58,6 @@ function AdminSignup() {
                                     placeholder="Password"
                                 />
                             </div>
-
-                            <div className='adminfill_in'>
-                                Re-enter Password *
-                                <input
-                                    type="password"
-                                    className="adminsignup_textBox"
-                                    value={checkPassword}
-                                    onChange={(e) => setCheckPassword(e.target.value)}
-                                    placeholder="Re-enter Password"
-                                />
-                            </div>
                         </div>
                         <div className='adminuser_details'>
                             <div className='adminfill_in'> 
@@ -82,8 +74,7 @@ function AdminSignup() {
                                 <div className='dropdown'>
                                     Select Employee Role *
                                     <select className="employee_roles">
-                                        <option value="select">Select Employee Role</option>
-                                        <option value="owner">Business Owner</option>
+                                        <option value="owner">Bussiness Owner</option>
                                         <option value="manager">Manager</option>
                                         <option value="associate">Associate</option>
                                     </select>

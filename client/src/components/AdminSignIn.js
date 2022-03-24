@@ -8,7 +8,7 @@ function AdminSignin() {
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [admin, loading, error] = useAuthState(auth)
+    const [user, loading, error] = useAuthState(auth)
     const history = useHistory()
 
     useEffect(() => {
@@ -16,9 +16,9 @@ function AdminSignin() {
             // maybe trigger a loading screen
             return
         }
-        if (admin) history.replace("/adminaccount")
+        if (user) history.replace("/menu")
 
-    }, [admin, loading])
+    }, [user, loading])
 
     return (
         <div className="adminsignin">
