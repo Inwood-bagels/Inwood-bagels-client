@@ -62,6 +62,22 @@ const registerWithEmailAndPassword = async (name, email, password, address, city
     }
 }
 
+const adminRegisterWithEmailAndPassword = async (name, password, email) =>{
+    try{
+        const res = await auth.createUserWithEmailAndPassword(email, password);
+        const adminUser = res.user;
+        await db.collection("Admin").add({
+            uid: adminUser.uid,
+            name,
+            authProvider: "local",
+            email
+        })
+
+    } catch (error) {
+        console.error(error);
+        alert(error.message);
+    }
+}
 const sendPasswordResetEmail = async (email) => {
     try {
         await auth.sendPasswordResetEmail(email)
@@ -84,4 +100,5 @@ export {
     registerWithEmailAndPassword,
     sendPasswordResetEmail,
     logout,
+    adminRegisterWithEmailAndPassword,
 }
