@@ -61,6 +61,26 @@ footer {
 }
 
 
+/* set pick up time */
+
+.set_pickup_time {
+    display: flex;
+    flex-direction: column;
+}
+
+.pickup_time {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-left: 5%;
+    width: 15vw;
+}
+
+.pickuptime_title {
+    font-size: medium;
+}
+
+
 /* item styling */
 
 .item_s {
