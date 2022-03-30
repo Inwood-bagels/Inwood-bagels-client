@@ -6,6 +6,7 @@ import Items from "./Items"
 
 function Menu() {
     const [menu, setMenu] = useState([])
+    const [time, setTime] = useState([])
     const [loading, setLoading] = useState(true)
     const DbGetMenu = async () => {
         const newItems = []
@@ -17,16 +18,42 @@ function Menu() {
         })
         setMenu(menu.concat(newItems))
     }
+
+    const getTime = async () => {
+        const newTime = []
+        const timeRes = db.collection("Time")
+        const data = await timeRes.get()
+        data.docs.forEach((doc) => {
+            newTime.push(doc.data())
+        })
+        setTime(time.concat(newTime))
+    }
     useEffect(() => {
         DbGetMenu()
+        getTime()
     }, []);
 
     return (
         <div className="container">
             <div className="Flex">
                 <div className="column is-flex">
-                    <button className="item_s ">Pick up</button>
-                    <button className="item_s ">Delivery</button>
+                    <button className="pickDel_btn">Pick up</button>
+                    <button className="pickDel_btn">Delivery</button>
+                    <div className='set_pickup_time'>
+                        <div className='pickup_time'>
+                            <h1 className="pickuptime_title"> Select Pick Up Time * </h1>
+                            {
+                                <select>
+                                    {
+                                        time.map((clock, id) => (
+                                            <option value={clock.time}>{clock.time}</option>
+                                        ))
+                                    }
+                                </select>
+                            }
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
@@ -55,3 +82,4 @@ function Menu() {
 }
 
 export default Menu
+
