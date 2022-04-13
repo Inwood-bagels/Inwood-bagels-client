@@ -27,6 +27,17 @@ function Menu() {
                 <div className="column is-flex">
                     <button className="item_s ">Pick up</button>
                     <button className="item_s ">Delivery</button>
+                    <div className='set_pickup_time'>
+                        <div className='pickup_time'>
+                            <h1 className="pickuptime_title"> Select Pick Up Time * </h1>
+                            <select className="pickup">
+                                <option value="8am">8 AM</option>
+                                <option value="9am">9 AM</option>
+                                <option value="10am">10 AM</option>
+                                <option value="11am">11 AM</option>
+                            </select>
+                        </div> 
+                    </div>
                 </div>
 
             </div>
