@@ -800,3 +800,14 @@ h1 {
     width: 5vw;
     height: 3.4vh;
 }
+
+
+/* search menu */
+
+.searchmenu {
+    /* font-family: Font Awesome; */
+    width: 10vw;
+    padding-left: 2%;
+    border-radius: 1%;
+    background-image: url('../images/searchicon.png');
+}
